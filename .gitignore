@@ -1,0 +1,6 @@
+env/
+__pycache__/
+.idea/
+file2.txt
+file3.txt
+test.txt
