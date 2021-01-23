@@ -5,9 +5,17 @@ import os
 from sys import exit
 
 
+"""
+NA 24.01
+-A i numerowanie się buguje.
+"""
+
+
 def generate_print(options, cwd: str) -> str:
     """Generates file content - line by line depending on specific option."""
     index = 1
+    minus = 0
+
     to_print = ""
 
     global path
@@ -29,7 +37,6 @@ def generate_print(options, cwd: str) -> str:
 
                 index += 1
         elif options.number_notblank:
-            minus = 0
             for line in readl:
                 line = line.replace("\n", "")
 
@@ -41,7 +48,7 @@ def generate_print(options, cwd: str) -> str:
 
                 index += 1
 
-            to_print = to_print[:-3]
+            to_print = to_print.rstrip("\n")
         else:
             for line in readl:
                 to_print += line
