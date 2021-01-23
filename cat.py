@@ -28,8 +28,6 @@ def main():
     cwd = os.getcwd()
 
     if args.files:
-        previous_generated = None
-
         generated = generate_print(options=args, cwd=cwd)
         print(generated)
     else:

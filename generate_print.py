@@ -7,6 +7,10 @@ from sys import exit
 
 def generate_print(options, cwd: str) -> str:
     """Generates file content - line by line depending on specific option."""
+    index = 1
+    to_print = ""
+
+    global path
     for file in options.files:
         if os.path.exists(file):
             path = file
@@ -19,14 +23,14 @@ def generate_print(options, cwd: str) -> str:
         with open(path, "r") as f:
             readl = f.readlines()
 
-        to_print = ""
-
         if options.number:
-            for index, line in enumerate(readl, start=1):
+            for line in readl:
                 to_print += f"     {index}  {line}"
+
+                index += 1
         elif options.number_notblank:
             minus = 0
-            for index, line in enumerate(readl, start=1):
+            for line in readl:
                 line = line.replace("\n", "")
 
                 if line:
@@ -35,10 +39,14 @@ def generate_print(options, cwd: str) -> str:
                     to_print += f"{line}\n"
                     minus += 1
 
+                index += 1
+
             to_print = to_print[:-3]
         else:
             for line in readl:
                 to_print += line
+
+        to_print += "\n"  # Because it's end of file.
 
         if options.A:
             to_print = to_print.replace("\t", "^I")
@@ -48,8 +56,9 @@ def generate_print(options, cwd: str) -> str:
 
             to_print = "".join(to_print_split)
         else:
-            if options.T:
-                pass
+            # if options.T:
+            #     pass
             # if options.
+            pass
 
-        return to_print
+    return to_print
