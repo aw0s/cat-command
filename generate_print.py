@@ -55,17 +55,17 @@ def generate_print(options, cwd: str) -> str:
 
         to_print += "\n"  # Because it's end of file.
 
-        if options.A:
-            to_print = to_print.replace("\t", "^I")
+    if options.A:
+        to_print = to_print.replace("\t", "^I")
 
-            to_print_split = to_print.split("\n")
-            to_print_split = [f"{line}$\n" for line in to_print_split]
+        to_print_split = to_print.split("\n")
+        to_print_split = [f"{line}$\n" for line in to_print_split]
 
-            to_print = "".join(to_print_split)
-        else:
-            # if options.T:
-            #     pass
-            # if options.
-            pass
+        to_print = "".join(to_print_split)
+    else:
+        # if options.T:
+        #     pass
+        # if options.
+        pass
 
     return to_print
