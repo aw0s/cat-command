@@ -47,7 +47,8 @@ def generate_print(options, cwd: str) -> str:
             for line in readl:
                 to_print += line
 
-        to_print += "\n"  # Because it's end of file.
+        if options.number_notblank:
+            to_print += "\n"  # Because it's end of file.
 
     if options.A:
         to_print = to_print.replace("\t", "^I")
