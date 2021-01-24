@@ -5,12 +5,6 @@ import os
 from sys import exit
 
 
-"""
-NA 24.01
--A i numerowanie się buguje.
-"""
-
-
 def generate_print(options, cwd: str) -> str:
     """Generates file content - line by line depending on specific option."""
     index = 1
