@@ -57,9 +57,7 @@ def generate_print(options, cwd: str) -> str:
 
         to_print = "".join(to_print_split)
     else:
-        # if options.T:
-        #     pass
-        # if options.
-        pass
+        if options.T:
+            to_print = to_print.replace("\t", "^I")
 
     return to_print
