@@ -16,7 +16,6 @@ Input: python cat.py file1.txt file2.txt file3.txt.
 Output:
 file1.txt content
 file2.txt content
-file3.txt content
-```
+file3.txt content```
 
 ## Flags
