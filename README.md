@@ -5,7 +5,7 @@ Python implementation of Linux cat command.
 The app currently works only on Linux.
 
 ## Download
-To download the project files, type `git clone https://github.com/aw0s/cat-command.git` in folder which you want the program to be placed in. You can also download ZIP file and then unpack it.
+To download the project files, type `git clone https://github.com/aw0s/cat-command.git` in folder which you want the program to be placed in. You can also download ZIP file and then unpack it.  
 If You want to use cat app instead of original cat, type `alias cat='python path/to/cat/cat.py'`. To remove alias, type `unalias cat`.
 
 ## Running the program
